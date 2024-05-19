@@ -2,4 +2,6 @@
     <string name="app_name">CapzAi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="home_fragment">Home fragment</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/9214589741</string>
+    <string name="admob_app_id">ca-app-pub-9190942885467963~9117165784</string>
 </resources>
