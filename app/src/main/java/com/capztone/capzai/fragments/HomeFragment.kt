@@ -60,10 +60,29 @@ class HomeFragment : Fragment(R.layout.fragment_home), ApiCallBack {
             // Use both spinner and input text to form the request
             val textToGenerate = "$selectedPerformanceLevel $inputText"
 
+            // Additional parameters
+            val gridSize = "1" // Example: Set grid size to 1
+            val width = "512" // Example: Set custom width
+            val height = "512" // Example: Set custom height
+            val imageGeneratorVersion = "hd" // Example: Set image generator version to HD
+            val negativePrompt = "trees" // Example: Set negative prompt
+
+            val apiKey = "ebc8659c-7b7c-4836-9e2f-5b8a10a48116" // Provide your API key here
+
             // Call your API using ViewModel when Generate button is clicked
             textToImageViewModel.setCallback(this) // Set the callback
-            textToImageViewModel.getTextToImage(textToGenerate)
+            textToImageViewModel.getTextToImage(
+                text = textToGenerate,
+                gridSize = gridSize,
+                width = width,
+                height = height,
+                imageGeneratorVersion = imageGeneratorVersion,
+                negativePrompt = negativePrompt,
+                apiKey = apiKey
+            )
         }
+
+
 
         textToImageViewModel.response.observe(viewLifecycleOwner) { response ->
             // Check if the response is not null and contains a valid image URL

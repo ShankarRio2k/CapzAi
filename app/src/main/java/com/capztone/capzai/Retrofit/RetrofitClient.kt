@@ -4,6 +4,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
     private const val BASE_URL = "https://api.deepai.org/api/"
@@ -12,13 +13,17 @@ object RetrofitClient {
         level = HttpLoggingInterceptor.Level.BODY
     }
 
+    // Increase timeout duration to 120 seconds
     private val httpClient = OkHttpClient.Builder()
-        .addInterceptor(loggingInterceptor) // Add logging interceptor
+        .addInterceptor(loggingInterceptor)
+        .connectTimeout(120, TimeUnit.SECONDS) // Increase connect timeout
+        .readTimeout(120, TimeUnit.SECONDS)    // Increase read timeout
+        .writeTimeout(120, TimeUnit.SECONDS)   // Increase write timeout
         .build()
 
     private val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
-        .client(httpClient) // Set the OkHttpClient with logging interceptor
+        .client(httpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
@@ -26,3 +31,4 @@ object RetrofitClient {
         retrofit.create(ApiService::class.java)
     }
 }
+

@@ -25,8 +25,24 @@ class TextToImageViewmodel : ViewModel() {
         callback = apiCallback
     }
 
-    fun getTextToImage(text: String) {
-        val call = RetrofitClient.apiService.getTextToImage(text, apiKey)
+    fun getTextToImage(
+        text: String,
+        gridSize: String = "2",
+        width: String = "512",
+        height: String = "512",
+        imageGeneratorVersion: String = "standard",
+        negativePrompt: String = "",
+        apiKey: String
+    ) {
+        val call = RetrofitClient.apiService.getTextToImage(
+            text = text,
+            gridSize = gridSize,
+            width = width,
+            height = height,
+            imageGeneratorVersion = imageGeneratorVersion,
+            negativePrompt = negativePrompt,
+            apiKey = apiKey
+        )
         call.enqueue(object : Callback<TextToImageResponse> {
             override fun onResponse(call: Call<TextToImageResponse>, response: Response<TextToImageResponse>) {
                 if (response.isSuccessful) {
@@ -46,5 +62,6 @@ class TextToImageViewmodel : ViewModel() {
             }
         })
     }
+
 
 }
