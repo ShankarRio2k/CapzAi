@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:ads="http://schemas.android.com/tools"
+    android:background="@drawable/layout_gradient"
     android:orientation="vertical"
     android:padding="16dp">
-    <!-- Banner AdView -->
 
     <!-- Banner AdView -->
-        <FrameLayout
+    <FrameLayout
         android:id="@+id/adFrameLayout"
         android:layout_width="wrap_content"
-            android:layout_gravity="center"
+        android:layout_gravity="center"
         android:layout_height="wrap_content" />
 
     <LinearLayout
@@ -32,41 +31,90 @@
                 android:id="@+id/multiline_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="  Ask the Ai ... ."
+                android:hint="Ask the Ai..."
                 android:inputType="textMultiLine"
                 android:minLines="3"
                 android:background="@drawable/rounded_border" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
             android:layout_weight="0">
 
-            <Spinner
-                android:id="@+id/dropdown_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/rounded_border" />
-        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <Spinner
+                    android:id="@+id/dropdown_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded_border" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/subject_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded_border"
+                    android:spinnerMode="dropdown" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/image_view"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginBottom="16dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/technology" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp">
 
-    <Button
-        android:id="@+id/submit_button"
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="Generate"
-        android:backgroundTint="#78909C"
-        android:textColor="@android:color/white" />
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Generate"
+            android:backgroundTint="#78909C"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/download_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:padding="3dp"
+            android:src="@drawable/down_arrow"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
 
 </LinearLayout>
+

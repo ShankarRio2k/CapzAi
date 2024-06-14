@@ -1,313 +1,420 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_gradient"
     tools:context=".fragments.IdeaFragment">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
+        android:orientation="vertical"
+        android:padding="8dp">
 
-        <!-- Image View -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/idea1"
-            android:contentDescription="kln" />
-
-        <!-- Description Text Overlay -->
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:text="Graphical Style: Robot Building"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
 
-    </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
+                <!-- Image View -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/idea1"
+                    android:contentDescription="kln" />
 
-        <!-- Image View -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/anmal"
-            android:contentDescription="kln" />
+                <!-- Description Text Overlay -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Graphical Style: Robot Building"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/overlay_gradient" />
 
-        <!-- Description Text Overlay -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Realistic Style: Animal Study"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
+                <!-- Small Label in Top Right Corner -->
+                <TextView
+                    android:id="@+id/try_it_label"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/label_background"
+                    android:text="Try it"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
-
-        <!-- Image View -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/science"
-            android:contentDescription="kln" />
-
-        <!-- Description Text Overlay -->
-        <TextView
+        <!-- Repeat the above structure for other CardViews -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:text="Anime Style: Science Class"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
 
-    </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
+                <!-- Image View -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anmal"
+                    android:contentDescription="kln" />
 
-        <!-- Image View -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/fruts"
-            android:contentDescription="kln" />
+                <!-- Description Text Overlay -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Realistic Style: Animal Study"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/overlay_gradient" />
+                <!-- Small Label in Top Right Corner -->
+                <TextView
+                    android:id="@+id/label_2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/label_background"
+                    android:text="Try it"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
 
-        <!-- Description Text Overlay -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="Cartoon Style: Learning About Fruits"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-    </androidx.cardview.widget.CardView>
+        <!-- Continue with other CardViews in a similar manner -->
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
-
-        <!-- Image View -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="kln" />
-
-        <!-- Description Text Overlay -->
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="Explain Big Bang Theory"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
 
-    </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
+                <!-- Image View -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/science"
+                    android:contentDescription="kln" />
 
-        <!-- Image View -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="kln" />
+                <!-- Description Text Overlay -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Realistic Style: Animal Study"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/overlay_gradient" />
+                <TextView
+                    android:id="@+id/label_3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/label_background"
+                    android:text="Try it"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-        <!-- Description Text Overlay -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="Explain Big Bang Theory"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
-
-        <!-- Image View -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="kln" />
-
-        <!-- Description Text Overlay -->
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="Explain Big Bang Theory"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
 
-    </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
+                <!-- Image View -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cyberpunk"
+                    android:contentDescription="kln" />
 
-        <!-- Image View -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="kln" />
+                <!-- Description Text Overlay -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Cyberpunk Style: Future City "
+                    android:gravity="center_vertical"
+                    android:background="@drawable/overlay_gradient" />
+                <TextView
+                    android:id="@+id/label_5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/label_background"
+                    android:text="Try it"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-        <!-- Description Text Overlay -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="Explain Big Bang Theory"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="0dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:foreground="?attr/selectableItemBackground">
-
-        <!-- Image View -->
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="kln" />
-
-        <!-- Description Text Overlay -->
-        <TextView
-            android:id="@+id/descriptionTextView"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/imageView"
-            android:padding="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:text="Explain Big Bang Theory"
-            android:gravity="center_vertical"
-            android:background="@drawable/overlay_gradient" />
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
 
-    </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <!-- Image View -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vintage"
+                    android:contentDescription="kln" />
+
+                <!-- Description Text Overlay -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Vintage Style: Historical Event "
+                    android:gravity="center_vertical"
+                    android:background="@drawable/overlay_gradient" />
+
+                <TextView
+                    android:id="@+id/label_6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/label_background"
+                    android:text="Try it"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <!-- Image View -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dragon"
+                    android:contentDescription="kln" />
+
+                <!-- Description Text Overlay -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Fantasy Style: Dragon Battle"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/overlay_gradient" />
+
+                <TextView
+                    android:id="@+id/label_7"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/label_background"
+                    android:text="Try it"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <!-- Image View -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/celebrity"
+                    android:contentDescription="kln" />
+
+                <!-- Description Text Overlay -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Pop Art Style: Celebrity Portrait "
+                    android:gravity="center_vertical"
+                    android:background="@drawable/overlay_gradient" />
+                <TextView
+                    android:id="@+id/label_8"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/label_background"
+                    android:text="Try it"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <!-- Image View -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anmal"
+                    android:contentDescription="kln" />
+
+                <!-- Description Text Overlay -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Realistic Style: Animal Study"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/overlay_gradient" />
+                <TextView
+                    android:id="@+id/label_9"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/label_background"
+                    android:text="Try it"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

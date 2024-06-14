@@ -9,11 +9,11 @@ interface ApiService {
     @FormUrlEncoded
     fun getTextToImage(
         @Field("text") text: String,
-        @Field("grid_size") gridSize: String = "2",
-        @Field("width") width: String = "512",
-        @Field("height") height: String = "512",
-        @Field("image_generator_version") imageGeneratorVersion: String = "hd",
-        @Field("negative_prompt") negativePrompt: String = "blurry and pixelated unclear",
+        @Field("grid_size") gridSize: String,
+        @Field("width") width: String,
+        @Field("height") height: String,
+        @Field("image_generator_version") imageGeneratorVersion: String,
+        @Field("negative_prompt") negativePrompt: String,
         @Header("api-key") apiKey: String
     ): Call<TextToImageResponse>
 }

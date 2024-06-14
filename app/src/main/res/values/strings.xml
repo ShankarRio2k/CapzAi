@@ -4,4 +4,36 @@
     <string name="home_fragment">Home fragment</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/9214589741</string>
     <string name="admob_app_id">ca-app-pub-9190942885467963~9117165784</string>
+
+    <string-array name="width_height_values">
+        <item>512 x 512</item>
+        <item>1024 x 1024</item>
+<!--        <item>1024 x 1792</item>-->
+<!--        <item>1792 x 1024</item>-->
+
+        <!-- Add more width x height options as needed -->
+    </string-array>
+
+    <string name="select_width_height">Select Width x Height</string>
+
+    <!-- res/values/arrays.xml -->
+        <string-array name="grid_size_values">
+            <item>1</item>
+            <item>2</item>
+            <item>3</item>
+            <!-- Add more grid size options as needed -->
+        </string-array>
+    <!-- res/values/strings.xml -->
+        <string name="select_grid_size">Select Grid Size</string>
+
+    <string-array name="version_values">
+        <item>standard</item>
+        <item>hd</item>
+        <item>genius</item>
+        <!-- Add more grid size options as needed -->
+    </string-array>
+
+    <string name="version">Select image version</string>
+
+
 </resources>

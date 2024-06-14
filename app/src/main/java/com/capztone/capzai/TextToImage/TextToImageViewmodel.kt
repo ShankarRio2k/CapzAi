@@ -28,8 +28,8 @@ class TextToImageViewmodel : ViewModel() {
     fun getTextToImage(
         text: String,
         gridSize: String = "2",
-        width: String = "512",
-        height: String = "512",
+        width: String = "",
+        height: String = "",
         imageGeneratorVersion: String = "standard",
         negativePrompt: String = "",
         apiKey: String

@@ -3,7 +3,6 @@ package com.capztone.capzai
 import android.content.Context
 import android.view.View
 import android.widget.FrameLayout
-import androidx.transition.Visibility
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
@@ -40,7 +39,7 @@ fun LoadBannerAds(
 }
 
 fun View.gone(){
-    visibility = View.GONE
+    visibility = View.VISIBLE
 }
 fun View.visible(){
     visibility = View.VISIBLE
